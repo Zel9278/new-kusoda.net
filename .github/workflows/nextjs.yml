@@ -42,7 +42,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
       - name: Build with Next.js
-        run: pnpm dlx --no-install next build
+        run: pnpm next build
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
