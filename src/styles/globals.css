@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@300&family=Montserrat+Alternates:wght@200&family=Montserrat:wght@200&family=Nanum+Gothic&family=Saira:wght@200&family=Zen+Kaku+Gothic+Antique&display=swap");
+
+@import "tailwindcss";
+
+* {
+  @apply box-border p-0 m-0 select-none cursor-none;
+}
+
+html,
+body {
+  @apply bg-[#1a1a1a] text-[#fafafa] w-full h-full;
+  font-family: "Nanum Gothic", sans-serif;
+}
+
+.h1-hover-effect {
+  color: #fafafa;
+  transition: color 0.2s;
+}
+
+.h1-hover-effect:hover {
+  background: repeating-linear-gradient(
+    rgba(255, 255, 255, 1) 0 33%,
+    rgba(0, 0, 255, 1) 33% 66%,
+    rgba(255, 0, 0, 1) 66% 100%
+  );
+  color: transparent;
+  background-clip: text;
+}
