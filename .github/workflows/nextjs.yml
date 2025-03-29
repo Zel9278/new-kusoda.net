@@ -57,17 +57,10 @@ jobs:
           path: |
             .next/cache
           # Generate a new cache whenever packages or source files change.
-<<<<<<< HEAD
           key: ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
           # If source files changed but packages didn't, rebuild from a prior cache.
           restore-keys: |
             ${{ runner.os }}-nextjs-${{ hashFiles('**/pnpm-lock.yaml') }}-
-=======
-          key: ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/pnpm-lock.yaml') }}-${{ hashFiles('**.[jt]s', '**.[jt]sx') }}
-          # If source files changed but packages didn't, rebuild from a prior cache.
-          restore-keys: |
-            ${{ runner.os }}-nextjs-${{ hashFiles('**/package-lock.json', '**/pnpm-lock.yaml') }}-
->>>>>>> refs/remotes/origin/main
       - name: Install dependencies
         run: ${{ steps.use-pnpm.outputs.manager }} ${{ steps.use-pnpm.outputs.command }}
       - name: Build with Next.js
